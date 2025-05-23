@@ -61,130 +61,58 @@
     </head> 
     
     <body class="ghost aadhar-card-download home"> 
-<header class="header-outer" role="banner" style="position: relative; z-index: 100;">
+
+<header style="background: #001833; color: white; padding: 10px 0; font-family: sans-serif;">
+  <div style="max-width: 1200px; margin: auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+    
+    <!-- Logo / Title -->
+    <a href="/" style="text-decoration: none; color: white;">
+      <div style="font-size: 1.5rem; font-weight: bold;">Aadhar Card Download</div>
+      <div style="font-size: 0.9rem;">Comprehensive Guide to Aadhaar Services</div>
+    </a>
+
+    <!-- Hamburger Icon -->
+    <button id="menu-toggle" aria-label="Toggle menu" style="display: none; background: none; border: none; color: white; font-size: 1.8rem;">
+      &#9776;
+    </button>
+
+    <!-- Navigation Menu -->
+    <nav id="main-menu" style="display: flex; gap: 20px;">
+      <a href="/uidai/" style="color: white; text-decoration: none;">UIDAI</a>
+      <a href="/aadhaar-card-status/" style="color: white; text-decoration: none;">Check Enrolment & Update Status</a>
+      <a href="/aadhaar-card-update/" style="color: white; text-decoration: none;">Update</a>
+    </nav>
+
+  </div>
+
+  <!-- Mobile Responsive Styles -->
   <style>
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #021835;
-      color: white;
-      padding: 10px 15px;
-      flex-wrap: wrap;
-    }
-
-    .site-title {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .site-tagline {
-      font-size: 12px;
-      display: block;
-    }
-
-    .main-nav {
-      width: 100%;
-    }
-
-    .mobile-menu-toggle {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 24px;
-      cursor: pointer;
-      display: none;
-    }
-
-    .menu-icon {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .menu-line {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 3px 0;
-    }
-
-    .nav-menu {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 15px;
-    }
-
-    .nav-item {
-      padding: 10px 0;
-    }
-
-    .nav-link {
-      color: white;
-      text-decoration: none;
-    }
-
     @media (max-width: 768px) {
-      .mobile-menu-toggle {
+      #menu-toggle {
         display: block;
       }
 
-      .nav-menu {
+      #main-menu {
         display: none;
         flex-direction: column;
-        background-color: #021139;
         width: 100%;
-        padding: 10px 0;
-        border-top: 1px solid #ccc;
+        padding: 10px 20px;
       }
 
-      .nav-menu.active {
+      #main-menu.active {
         display: flex;
       }
     }
   </style>
 
-  <div class="header-inner">
-    <div class="header-brand">
-      <a href="/" class="site-title-link" aria-label="Return to homepage">
-        <span class="site-title">Aadhar Card Download</span><br>
-        <span class="site-tagline">Comprehensive Guide to Aadhaar Services</span>
-      </a>
-    </div>
-
-    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="main-menu">
-      <span class="menu-icon">
-        <span class="menu-line"></span>
-        <span class="menu-line"></span>
-        <span class="menu-line"></span>
-      </span>
-    </button>
-  </div>
-
-  <nav class="main-nav" aria-label="Main navigation">
-    <ul id="main-menu" class="nav-menu">
-      <li class="nav-item"><a href="/uidai/" class="nav-link">UIDAI</a></li>
-      <li class="nav-item"><a href="/aadhaar-card-status/" class="nav-link">Check Enrolment & Update Status</a></li>
-      <li class="nav-item"><a href="/aadhaar-card-update/" class="nav-link">Update</a></li>
-    </ul>
-  </nav>
-
+  <!-- Toggle Script -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleButton = document.querySelector(".mobile-menu-toggle");
-      const menu = document.getElementById("main-menu");
-
-      toggleButton.addEventListener("click", function () {
-        menu.classList.toggle("active");
-        const expanded = toggleButton.getAttribute("aria-expanded") === "true";
-        toggleButton.setAttribute("aria-expanded", !expanded);
-      });
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      document.getElementById('main-menu').classList.toggle('active');
     });
   </script>
 </header>
-
+	     
 
 
 
