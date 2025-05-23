@@ -34,29 +34,51 @@
   
 </head>
 
-<body class="ghost aadhar-card-download page">
-  <!-- Header -->
-  <header class="header-outer" role="banner">
-    <div class="header-inner">
-      <div class="header-brand">
-        <a href="#" class="site-title-link" aria-label="Return to homepage">
-          <span class="site-title">Aadhar Card Download</span>
-          <span class="site-tagline">Comprehensive Guide to Aadhaar Services</span>
-        </a>
+<header class="header-outer" role="banner">
+      <div class="header-inner">
+        <div class="header-brand">
+          <a href="/" class="site-title-link" aria-label="Return to homepage">
+            <span class="site-title">Adhar Card Download</span>
+            <span class="site-tagline" aria-label="Comprehensive Guide to Aadhaar Services">Comprehensive Guide to Aadhaar Services</span>
+          </a>
+        </div>
+        
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="main-menu">
+            <span class="menu-icon">
+              <span class="menu-line"></span>
+            </span>
+          </button>
+          
+          <ul id="main-menu" class="nav-menu">
+            <li class="nav-item">
+              <a href="/uidai" class="nav-link" aria-label="Visit UIDAI">UIDAI</a>
+            </li>
+            <li class="nav-item">
+              <a href="/aadhaar-card-status" class="nav-link" aria-label="Visit Check Enrolment &amp; Update Status">Check Enrolment &amp; Update Status</a>
+            </li>
+            <li class="nav-item">
+              <a href="/aadhaar-card-update" class="nav-link" aria-label="Visit Update">Update</a>
+            </li>
+          </ul>
+        </nav>
+        
+          <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.querySelector(".mobile-menu-toggle");
+      const menu = document.getElementById("main-menu");
+
+      toggleButton.addEventListener("click", function () {
+        menu.classList.toggle("active");
+        const expanded = toggleButton.getAttribute("aria-expanded") === "true";
+        toggleButton.setAttribute("aria-expanded", !expanded);
+      });
+    });
+    </script>
+        
+        <a href="#main-content" class="skip-to-content">Skip to main content</a>
       </div>
-      <nav class="main-nav" aria-label="Main navigation">
-        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="main-menu">
-          <span class="menu-icon"><span class="menu-line"></span></span>
-        </button>
-        <ul id="main-menu" class="nav-menu">
-          <li class="nav-item"><a href="/uidai" class="nav-link">UIDAI</a></li>
-          <li class="nav-item"><a href="/aadhaar-card-status" class="nav-link">Check Enrolment & Update Status</a></li>
-          <li class="nav-item"><a href="/aadhaar-card-update" class="nav-link">Update</a></li>
-        </ul>
-      </nav>
-      <a href="#main-content" class="skip-to-content">Skip to main content</a>
-    </div>
-  </header>
+    </header>
 
   <!-- Main Content -->
   <main class="site-content" role="main" id="main-content">
