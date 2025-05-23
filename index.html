@@ -61,125 +61,38 @@
     </head> 
     
     <body class="ghost aadhar-card-download home"> 
-	   <header class="header-outer">
-  <div class="header-inner">
-    <div class="header-brand">
-      <a href="/" class="site-title-link">
-        <span class="site-title">Aadhar Card Download</span>
-        <span class="site-tagline">Ultimate Guide on Aadhaar Card Services</span>
-      </a>
-    </div>
-
-    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
-      &#9776;
-    </button>
-
-    <nav id="main-nav" class="main-nav">
-      <ul class="nav-menu">
-        <li><a href="/uidai">UIDAI</a></li>
-        <li><a href="/aadhaar-card-status">Check Enrolment & Update Status</a></li>
-        <li><a href="/aadhaar-card-update">Update</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<style>
-  .header-outer {
-    background: #0a3d62;
-    color: white;
-    padding: 15px;
-  }
-
-  .header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .site-title-link {
-    text-decoration: none;
-    color: white;
-  }
-
-  .site-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  .site-tagline {
-    font-size: 0.85rem;
-    display: block;
-  }
-
-  .menu-toggle {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    display: none;
-  }
-
-  .main-nav {
-    display: flex;
-  }
-
-  .nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .nav-menu li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-
-    .main-nav {
-      display: none;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background: #07417a;
-      padding: 15px 0;
-    }
-
-    .main-nav.open {
-      display: block;
-    }
-
-    .nav-menu {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .nav-menu li {
-      margin: 10px 0;
-    }
-  }
-</style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("menu-toggle");
-    const navMenu = document.getElementById("main-nav");
-
-    toggleButton.addEventListener("click", function () {
-      navMenu.classList.toggle("open");
-      this.innerHTML = navMenu.classList.contains("open") ? "&#10006;" : "&#9776;";
-    });
-  });
-</script>
+  <header class="header-outer" role="banner">
+      <div class="header-inner">
+        <div class="header-brand">
+          <a href="#" class="site-title-link" aria-label="Return to homepage">
+            <span class="site-title">Adhar Card Download</span>
+            <span class="site-tagline" aria-label="Comprehensive Guide to Aadhaar Services">Comprehensive Guide to Aadhaar Services</span>
+          </a>
+        </div>
+        
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="main-menu">
+            <span class="menu-icon">
+              <span class="menu-line"></span>
+            </span>
+          </button>
+          
+          <ul id="main-menu" class="nav-menu">
+            <li class="nav-item">
+              <a href="/uidai" class="nav-link" aria-label="Visit UIDAI">UIDAI</a>
+            </li>
+            <li class="nav-item">
+              <a href="/aadhaar-card-status" class="nav-link" aria-label="Visit Check Enrolment &amp; Update Status">Check Enrolment &amp; Update Status</a>
+            </li>
+            <li class="nav-item">
+              <a href="/aadhaar-card-update" class="nav-link" aria-label="Visit Update">Update</a>
+            </li>
+          </ul>
+        </nav>
+        
+        <a href="#main-content" class="skip-to-content">Skip to main content</a>
+      </div>
+    </header>
  
 
 
