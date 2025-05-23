@@ -61,7 +61,7 @@
     </head> 
     
     <body class="ghost aadhar-card-download home"> 
-    <header class="header-outer" role="banner"> 
+   <header class="header-outer" role="banner" style="position: relative;">
   <div class="header-inner"> 
     <div class="header-brand"> 
       <a href="/" class="site-title-link" aria-label="Return to homepage"> 
@@ -73,44 +73,56 @@
     </div> 
 
     <nav class="main-nav" aria-label="Main navigation"> 
-      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="main-menu"> 
-        <span class="menu-icon"> 
-          <span class="menu-line"></span> 
-        </span> 
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="main-menu" style="background: none; border: none; cursor: pointer;">
+        <span class="menu-icon">
+          <span class="menu-line" style="display: block; width: 25px; height: 3px; background: #fff; margin: 5px 0;"></span>
+          <span class="menu-line" style="display: block; width: 25px; height: 3px; background: #fff; margin: 5px 0;"></span>
+          <span class="menu-line" style="display: block; width: 25px; height: 3px; background: #fff; margin: 5px 0;"></span>
+        </span>
       </button> 
 
-      <ul id="main-menu" class="nav-menu" style="display: none;"> 
-        <li class="nav-item"> 
-          <a href="/uidai" class="nav-link" aria-label="Visit UIDAI"> UIDAI </a> 
+      <ul id="main-menu" class="nav-menu" style="display: none; list-style: none; padding: 0; margin: 0; background: #fff;">
+        <li class="nav-item">
+          <a href="/uidai" class="nav-link" style="display: block; padding: 10px;">UIDAI</a>
         </li>
-        <li class="nav-item"> 
-          <a href="/aadhaar-card-status" class="nav-link" aria-label="Visit Check Enrolment &#38; Update Status"> 
-            Check Enrolment &amp; Update Status 
-          </a> 
+
+        <li class="nav-item has-dropdown" style="position: relative;">
+          <a href="#" class="nav-link" style="display: block; padding: 10px;">Aadhaar Services</a>
+          <ul class="dropdown" style="display: none; position: static; list-style: none; padding: 0; margin: 0; background: #f0f0f0;">
+            <li><a href="/aadhaar-card-status" style="display: block; padding: 10px;">Check Status</a></li>
+            <li><a href="/aadhaar-card-update" style="display: block; padding: 10px;">Update Details</a></li>
+          </ul>
         </li>
-        <li class="nav-item"> 
-          <a href="/aadhaar-card-update" class="nav-link" aria-label="Visit Update"> Update </a> 
-        </li> 
-      </ul> 
+      </ul>
     </nav> 
 
     <a href="#main-content" class="skip-to-content">Skip to main content</a> 
   </div> 
 
-  <!-- Inline JavaScript to toggle the menu -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var toggle = document.querySelector('.mobile-menu-toggle');
       var menu = document.getElementById('main-menu');
 
       toggle.addEventListener('click', function () {
-        var isOpen = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', !isOpen);
-        menu.style.display = isOpen ? 'none' : 'block';
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        menu.style.display = expanded ? 'none' : 'block';
+      });
+
+      // Handle dropdowns
+      var dropdownParents = document.querySelectorAll('.nav-item.has-dropdown');
+      dropdownParents.forEach(function (parent) {
+        parent.addEventListener('click', function (e) {
+          e.preventDefault();
+          var dropdown = parent.querySelector('.dropdown');
+          dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
       });
     });
   </script>
 </header>
+
     <main class="site-content" role="main" id="main-content" aria-label="Homepage content"> 
     <article class="article" aria-labelledby="article-title"> 
     <header> 
