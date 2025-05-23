@@ -37,11 +37,10 @@
     
   </head>
 
-  <body class="ghost aadhar-card-download post">
-    <header class="header-outer" role="banner">
+  <header class="header-outer" role="banner">
       <div class="header-inner">
         <div class="header-brand">
-          <a href="#" class="site-title-link" aria-label="Return to homepage">
+          <a href="/" class="site-title-link" aria-label="Return to homepage">
             <span class="site-title">Adhar Card Download</span>
             <span class="site-tagline" aria-label="Comprehensive Guide to Aadhaar Services">Comprehensive Guide to Aadhaar Services</span>
           </a>
@@ -66,6 +65,19 @@
             </li>
           </ul>
         </nav>
+        
+          <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.querySelector(".mobile-menu-toggle");
+      const menu = document.getElementById("main-menu");
+
+      toggleButton.addEventListener("click", function () {
+        menu.classList.toggle("active");
+        const expanded = toggleButton.getAttribute("aria-expanded") === "true";
+        toggleButton.setAttribute("aria-expanded", !expanded);
+      });
+    });
+    </script>
         
         <a href="#main-content" class="skip-to-content">Skip to main content</a>
       </div>
