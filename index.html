@@ -62,92 +62,7 @@
     
     <body class="ghost aadhar-card-download home"> 
 
-    <header class="header-outer" role="banner">
-
-    <style>
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #003366;
-      color: white;
-      padding: 10px 15px;
-      flex-wrap: wrap;
-    }
-
-    .site-title {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .site-tagline {
-      font-size: 12px;
-      display: block;
-    }
-
-    .main-nav {
-      width: 100%;
-    }
-
-    .mobile-menu-toggle {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 24px;
-      cursor: pointer;
-      display: none;
-    }
-
-    .menu-icon {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .menu-line {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 3px 0;
-    }
-
-    .nav-menu {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 15px;
-    }
-
-    .nav-item {
-      padding: 10px 0;
-    }
-
-    .nav-link {
-      color: white;
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .mobile-menu-toggle {
-        display: block;
-      }
-
-      .nav-menu {
-        display: none;
-        flex-direction: column;
-        background-color: #003366;
-        width: 100%;
-        padding: 10px 0;
-        border-top: 1px solid #ccc;
-      }
-
-      .nav-menu.active {
-        display: flex;
-      }
-    }
-  </style>
-	    
+       <header class="header-outer" role="banner">
       <div class="header-inner">
         <div class="header-brand">
           <a href="#" class="site-title-link" aria-label="Return to homepage">
@@ -176,28 +91,7 @@
           </ul>
         </nav>
         
-        <a href="#main-content" class="skip-to-content">Skip to main content</a>
-      </div>
-
-
-    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="main-menu">
-      <span class="menu-icon">
-        <span class="menu-line"></span>
-        <span class="menu-line"></span>
-        <span class="menu-line"></span>
-      </span>
-    </button>
-  </div>
-
-  <nav class="main-nav" aria-label="Main navigation">
-    <ul id="main-menu" class="nav-menu">
-      <li class="nav-item"><a href="/uidai/" class="nav-link">UIDAI</a></li>
-      <li class="nav-item"><a href="/aadhaar-card-status/" class="nav-link">Check Enrolment & Update Status</a></li>
-      <li class="nav-item"><a href="/aadhaar-card-update/" class="nav-link">Update</a></li>
-    </ul>
-  </nav>
-
-  <script>
+          <script>
     document.addEventListener("DOMContentLoaded", function () {
       const toggleButton = document.querySelector(".mobile-menu-toggle");
       const menu = document.getElementById("main-menu");
@@ -208,9 +102,10 @@
         toggleButton.setAttribute("aria-expanded", !expanded);
       });
     });
-  </script>
-
-	    
+    </script>
+        
+        <a href="#main-content" class="skip-to-content">Skip to main content</a>
+      </div>
     </header>
 	     
 
