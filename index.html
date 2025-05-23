@@ -62,31 +62,55 @@
     
     <body class="ghost aadhar-card-download home"> 
     <header class="header-outer" role="banner"> 
-    <div class="header-inner"> 
+  <div class="header-inner"> 
     <div class="header-brand"> 
-    <a href="/" class="site-title-link" aria-label="Return to homepage"> 
-    <span class="site-title">Aadhar Card Download</span> 
-    <span class="site-tagline" aria-label="Ultimate Guide on Aadhaar Card Services">Ultimate Guide on Aadhaar Card Services</span> 
-    </a> 
+      <a href="/" class="site-title-link" aria-label="Return to homepage"> 
+        <span class="site-title">Aadhar Card Download</span> 
+        <span class="site-tagline" aria-label="Ultimate Guide on Aadhaar Card Services">
+          Ultimate Guide on Aadhaar Card Services
+        </span> 
+      </a> 
     </div> 
+
     <nav class="main-nav" aria-label="Main navigation"> 
-    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="main-menu"> 
-    <span class="menu-icon"> <span class="menu-line"></span> 
-    </span> 
-    </button> 
-    <ul id="main-menu" class="nav-menu"> 
-    <li class="nav-item"> 
-    <a href="/uidai" class="nav-link" aria-label="Visit UIDAI"> UIDAI </a> 
-    </li>
-    <li class="nav-item"> 
-    <a href="/aadhaar-card-status" class="nav-link" aria-label="Visit Check Enrolment &#38; Update Status"> Check Enrolment &amp; Update Status </a> </li>
-    <li class="nav-item"> 
-    <a href="/aadhaar-card-update" class="nav-link" aria-label="Visit Update"> Update </a> 
-    </li> 
-    </ul> 
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="main-menu"> 
+        <span class="menu-icon"> 
+          <span class="menu-line"></span> 
+        </span> 
+      </button> 
+
+      <ul id="main-menu" class="nav-menu" style="display: none;"> 
+        <li class="nav-item"> 
+          <a href="/uidai" class="nav-link" aria-label="Visit UIDAI"> UIDAI </a> 
+        </li>
+        <li class="nav-item"> 
+          <a href="/aadhaar-card-status" class="nav-link" aria-label="Visit Check Enrolment &#38; Update Status"> 
+            Check Enrolment &amp; Update Status 
+          </a> 
+        </li>
+        <li class="nav-item"> 
+          <a href="/aadhaar-card-update" class="nav-link" aria-label="Visit Update"> Update </a> 
+        </li> 
+      </ul> 
     </nav> 
-    <a href="#main-content" class="skip-to-content">Skip to main content</a> </div> 
-    </header> 
+
+    <a href="#main-content" class="skip-to-content">Skip to main content</a> 
+  </div> 
+
+  <!-- Inline JavaScript to toggle the menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var toggle = document.querySelector('.mobile-menu-toggle');
+      var menu = document.getElementById('main-menu');
+
+      toggle.addEventListener('click', function () {
+        var isOpen = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !isOpen);
+        menu.style.display = isOpen ? 'none' : 'block';
+      });
+    });
+  </script>
+</header>
     <main class="site-content" role="main" id="main-content" aria-label="Homepage content"> 
     <article class="article" aria-labelledby="article-title"> 
     <header> 
