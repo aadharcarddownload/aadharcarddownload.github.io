@@ -61,24 +61,24 @@
     </head> 
     
     <body class="ghost aadhar-card-download home"> 
-    <header class="header-outer" role="banner">
+	   <header class="header-outer">
   <div class="header-inner">
     <div class="header-brand">
-      <a href="/" class="site-title-link" aria-label="Return to homepage">
+      <a href="/" class="site-title-link">
         <span class="site-title">Aadhar Card Download</span>
         <span class="site-tagline">Ultimate Guide on Aadhaar Card Services</span>
       </a>
     </div>
 
-    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
       &#9776;
     </button>
 
-    <nav class="main-nav" id="main-nav">
+    <nav id="main-nav" class="main-nav">
       <ul class="nav-menu">
-        <li class="nav-item"><a href="/uidai" class="nav-link">UIDAI</a></li>
-        <li class="nav-item"><a href="/aadhaar-card-status" class="nav-link">Check Enrolment & Update Status</a></li>
-        <li class="nav-item"><a href="/aadhaar-card-update" class="nav-link">Update</a></li>
+        <li><a href="/uidai">UIDAI</a></li>
+        <li><a href="/aadhaar-card-status">Check Enrolment & Update Status</a></li>
+        <li><a href="/aadhaar-card-update">Update</a></li>
       </ul>
     </nav>
   </div>
@@ -86,50 +86,72 @@
 
 <style>
   .header-outer {
-    background: #061c3d;
+    background: #0a3d62;
     color: white;
-    padding: 10px;
+    padding: 15px;
   }
-  .site-title, .site-tagline {
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-title-link {
+    text-decoration: none;
+    color: white;
+  }
+
+  .site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .site-tagline {
+    font-size: 0.85rem;
     display: block;
   }
+
+  .menu-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+
   .main-nav {
     display: flex;
   }
+
   .nav-menu {
-    display: flex;
     list-style: none;
-    gap: 15px;
-    margin: 0;
+    display: flex;
+    gap: 20px;
     padding: 0;
-  }
-  .nav-link {
-    color: white;
-    text-decoration: none;
+    margin: 0;
   }
 
-  .mobile-menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
+  .nav-menu li a {
     color: white;
-    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
   }
 
   @media (max-width: 768px) {
-    .mobile-menu-toggle {
+    .menu-toggle {
       display: block;
     }
 
     .main-nav {
       display: none;
-      position: fixed;
+      position: absolute;
       top: 60px;
       left: 0;
       width: 100%;
-      background: #0a4ba1;
-      z-index: 1000;
+      background: #07417a;
+      padding: 15px 0;
     }
 
     .main-nav.open {
@@ -138,23 +160,28 @@
 
     .nav-menu {
       flex-direction: column;
-      gap: 10px;
-      padding: 20px;
+      align-items: center;
+    }
+
+    .nav-menu li {
+      margin: 10px 0;
     }
   }
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".mobile-menu-toggle");
-    const nav = document.getElementById("main-nav");
+    const toggleButton = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("main-nav");
 
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-      toggle.innerHTML = nav.classList.contains("open") ? "&#10006;" : "&#9776;";
+    toggleButton.addEventListener("click", function () {
+      navMenu.classList.toggle("open");
+      this.innerHTML = navMenu.classList.contains("open") ? "&#10006;" : "&#9776;";
     });
   });
 </script>
+ 
+
 
 
     <main class="site-content" role="main" id="main-content" aria-label="Homepage content"> 
