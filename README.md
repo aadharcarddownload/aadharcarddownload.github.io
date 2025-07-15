@@ -10,7 +10,7 @@ I started to wonder how many other people like me were falling into this trap. W
 
 That’s when I decided: I need to do something about this.
 
-And that's how **[Aadhar Card Download](https://aadharcarddownload.github.io/)** was born — a safe, clean, ad-free, and trustworthy guide for Indian citizens to understand how to **download their Aadhaar card** from the **official UIDAI portal**, without getting lost or misled online.
+And that's how **[Aadhaar Card Download](https://aadharcarddownloads.org)** was born — a safe, clean, ad-free, and trustworthy guide for Indian citizens to understand how to **download their Aadhaar card** from the **official UIDAI portal**, without getting lost or misled online.
 
 ---
 
@@ -56,7 +56,7 @@ To download your Aadhaar, we always redirect you to the **official UIDAI website
 
 ## 🧭 How to Use the Website
 
-1. Visit the homepage at [aadharcarddownload.github.io](https://aadharcarddownload.github.io/)
+1. Visit the homepage at [aadharcarddownloads.org](https://aadharcarddownloads.org)
 2. Read the instructions on how to download your e-Aadhaar
 3. Click on the provided official link to UIDAI
 4. Enter your Aadhaar or Enrolment ID on UIDAI's secure page
